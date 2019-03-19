@@ -1,0 +1,217 @@
+Connection	matching	Soot(1)	OSA(2)	SPOON(4)	JCG(8)	WALA(16)	JDT(64)	IntersectionID
+(0)dynamic.DynamicTest.reflection()->(2)java.lang.Class.forName(java.lang.String)	6	X	X	X	X	X	X	95
+(0)dynamic.DynamicTest.reflection()->(3)helper.Debug.debug(java.lang.String)	6	X	X	X	X	X	X	95
+(0)dynamic.DynamicTest.reflection()->(76)java.lang.Class.getMethod(java.lang.String,java.lang.Class[])	6	X	X	X	X	X	X	95
+(0)dynamic.DynamicTest.reflection()->(78)java.lang.reflect.Method.invoke(java.lang.Object,java.lang.Object[])	6	X	X	X	X	X	X	95
+(0)dynamic.DynamicTest.reflection()->(79)java.io.PrintStream.println(java.lang.String)	6	X	X	X	X	X	X	95
+(3)helper.Debug.debug(java.lang.String)->(79)java.io.PrintStream.println(java.lang.String)	6	X	X	X	X	X	X	95
+(7)dynamic.DynamicTest.methodHandle()->(3)helper.Debug.debug(java.lang.String)	6	X	X	X	X	X	X	95
+(7)dynamic.DynamicTest.methodHandle()->(8)java.lang.invoke.MethodHandles.lookup()	6	X	X	X	X	X	X	95
+(7)dynamic.DynamicTest.methodHandle()->(9)java.lang.invoke.MethodType.methodType(java.lang.Class,java.lang.Class)	6	X	X	X	X	X	X	95
+(7)dynamic.DynamicTest.methodHandle()->(79)java.io.PrintStream.println(java.lang.String)	6	X	X	X	X	X	X	95
+(7)dynamic.DynamicTest.methodHandle()->(80)java.lang.invoke.MethodHandles$Lookup.findStatic(java.lang.Class,java.lang.String,java.lang.invoke.MethodType)	6	X	X	X	X	X	X	95
+(7)dynamic.DynamicTest.methodHandle()->(82)java.lang.Throwable.printStackTrace()	6	X	X	X	X	X	X	95
+(12)java8.Java8Test.lambda()->(3)helper.Debug.debug(java.lang.String)	6	X	X	X	X	X	X	95
+(13)java8.Java8Test.methodReference()->(3)helper.Debug.debug(java.lang.String)	6	X	X	X	X	X	X	95
+(13)java8.Java8Test.methodReference()->(22)java8.MethodReference.<init>()	6	X	X	X	X	X	X	95
+(13)java8.Java8Test.methodReference()->(84)java8.MethodReference.doSomething()	6	X	X	X	X	X	X	95
+(14)java8.Java8Test.functionalInterface()->(3)helper.Debug.debug(java.lang.String)	6	X	X	X	X	X	X	95
+(15)java8.Java8Test.functionalInterface2()->(3)helper.Debug.debug(java.lang.String)	6	X	X	X	X	X	X	95
+(16)java8.Java8Test.test()->(3)helper.Debug.debug(java.lang.String)	6	X	X	X	X	X	X	95
+(16)java8.Java8Test.test()->(12)java8.Java8Test.lambda()	6	X	X	X	X	X	X	95
+(16)java8.Java8Test.test()->(13)java8.Java8Test.methodReference()	6	X	X	X	X	X	X	95
+(16)java8.Java8Test.test()->(14)java8.Java8Test.functionalInterface()	6	X	X	X	X	X	X	95
+(16)java8.Java8Test.test()->(15)java8.Java8Test.functionalInterface2()	6	X	X	X	X	X	X	95
+(20)java8.MethodReference.print(java.lang.String)->(3)helper.Debug.debug(java.lang.String)	6	X	X	X	X	X	X	95
+(21)java8.MethodReference.privatePrint()->(3)helper.Debug.debug(java.lang.String)	6	X	X	X	X	X	X	95
+(24)generics.GenericsTest.genericMethod(helper.Interface)->(3)helper.Debug.debug(java.lang.String)	6	X	X	X	X	X	X	95
+(25)generics.GenericsTest.test()->(3)helper.Debug.debug(java.lang.String)	6	X	X	X	X	X	X	95
+(25)generics.GenericsTest.test()->(24)generics.GenericsTest.genericMethod(helper.Interface)	5	X	X	X	X	X		31
+(25)generics.GenericsTest.test()->(27)generics.Generic2.generic(helper.Interface,generics.Generic1)	5	X	X	X	X	X		31
+(25)generics.GenericsTest.test()->(28)generics.Generic3.foo()	6	X	X	X	X	X	X	95
+(25)generics.GenericsTest.test()->(86)helper.Child1.<init>()	6	X	X	X	X	X	X	95
+(25)generics.GenericsTest.test()->(116)generics.Generic1.<init>()	6	X	X	X	X	X	X	95
+(25)generics.GenericsTest.test()->(118)helper.Child2.<init>()	6	X	X	X	X	X	X	95
+(25)generics.GenericsTest.test()->(119)generics.Generic2.<init>()	6	X	X	X	X	X	X	95
+(25)generics.GenericsTest.test()->(120)generics.Generic3.<init>()	6	X	X	X	X	X	X	95
+(27)generics.Generic2.generic(helper.Interface,generics.Generic1)->(3)helper.Debug.debug(java.lang.String)	6	X	X	X	X	X	X	95
+(28)generics.Generic3.foo()->(3)helper.Debug.debug(java.lang.String)	6	X	X	X	X	X	X	95
+(28)generics.Generic3.foo()->(86)helper.Child1.<init>()	6	X	X	X	X	X	X	95
+(29)parser.ParserTest.test()->(3)helper.Debug.debug(java.lang.String)	6	X	X	X	X	X	X	95
+(29)parser.ParserTest.test()->(27)generics.Generic2.generic(helper.Interface,generics.Generic1)	5	X	X	X	X	X		31
+(29)parser.ParserTest.test()->(30)parser.ForParser.foo()	6	X	X	X	X	X	X	95
+(29)parser.ParserTest.test()->(31)parser.ForParser.goo()	6	X	X	X	X	X	X	95
+(29)parser.ParserTest.test()->(32)parser.ForParser.validMethod(helper.Child2,generics.Generic1,java.lang.Class[])	6	X	X	X	X	X	X	95
+(29)parser.ParserTest.test()->(33)parser.ForParser.validGenericMethod(helper.Child2,generics.Generic1,java.lang.Class[])	6	X	X	X	X	X	X	95
+(29)parser.ParserTest.test()->(116)generics.Generic1.<init>()	6	X	X	X	X	X	X	95
+(29)parser.ParserTest.test()->(118)helper.Child2.<init>()	6	X	X	X	X	X	X	95
+(29)parser.ParserTest.test()->(122)parser.ForParser.<init>()	6	X	X	X	X	X	X	95
+(30)parser.ForParser.foo()->(3)helper.Debug.debug(java.lang.String)	6	X	X	X	X	X	X	95
+(31)parser.ForParser.goo()->(3)helper.Debug.debug(java.lang.String)	6	X	X	X	X	X	X	95
+(32)parser.ForParser.validMethod(helper.Child2,generics.Generic1,java.lang.Class[])->(3)helper.Debug.debug(java.lang.String)	6	X	X	X	X	X	X	95
+(32)parser.ForParser.validMethod(helper.Child2,generics.Generic1,java.lang.Class[])->(27)generics.Generic2.generic(helper.Interface,generics.Generic1)	5	X	X	X	X	X		31
+(32)parser.ForParser.validMethod(helper.Child2,generics.Generic1,java.lang.Class[])->(119)generics.Generic2.<init>()	6	X	X	X	X	X	X	95
+(33)parser.ForParser.validGenericMethod(helper.Child2,generics.Generic1,java.lang.Class[])->(3)helper.Debug.debug(java.lang.String)	6	X	X	X	X	X	X	95
+(33)parser.ForParser.validGenericMethod(helper.Child2,generics.Generic1,java.lang.Class[])->(27)generics.Generic2.generic(helper.Interface,generics.Generic1)	5	X	X	X	X	X		31
+(33)parser.ForParser.validGenericMethod(helper.Child2,generics.Generic1,java.lang.Class[])->(116)generics.Generic1.<init>()	6	X	X	X	X	X	X	95
+(33)parser.ForParser.validGenericMethod(helper.Child2,generics.Generic1,java.lang.Class[])->(119)generics.Generic2.<init>()	6	X	X	X	X	X	X	95
+(34)anonymAndInner.Outer.inner()->(3)helper.Debug.debug(java.lang.String)	6	X	X	X	X	X	X	95
+(34)anonymAndInner.Outer.inner()->(38)anonymAndInner.Outer$Inner.inner()	6	X	X	X	X	X	X	95
+(35)anonymAndInner.AnonymAndInnerTest$1.foo()->(3)helper.Debug.debug(java.lang.String)	6	X	X	X	X	X	X	95
+(36)anonymAndInner.Outer$Nested.staticNested()->(3)helper.Debug.debug(java.lang.String)	6	X	X	X	X	X	X	95
+(37)anonymAndInner.Outer$Nested.nested()->(3)helper.Debug.debug(java.lang.String)	6	X	X	X	X	X	X	95
+(38)anonymAndInner.Outer$Inner.inner()->(3)helper.Debug.debug(java.lang.String)	6	X	X	X	X	X	X	95
+(39)anonymAndInner.AnonymAndInnerTest.innerClass()->(3)helper.Debug.debug(java.lang.String)	6	X	X	X	X	X	X	95
+(39)anonymAndInner.AnonymAndInnerTest.innerClass()->(34)anonymAndInner.Outer.inner()	6	X	X	X	X	X	X	95
+(39)anonymAndInner.AnonymAndInnerTest.innerClass()->(124)anonymAndInner.Outer.<init>()	6	X	X	X	X	X	X	95
+(40)anonymAndInner.AnonymAndInnerTest.anonim()->(3)helper.Debug.debug(java.lang.String)	6	X	X	X	X	X	X	95
+(40)anonymAndInner.AnonymAndInnerTest.anonim()->(48)helper.Child1.goo()	6	X	X	X	X	X	X	95
+(40)anonymAndInner.AnonymAndInnerTest.anonim()->(49)helper.Child1.foo()	4		X	X	X		X	78
+(41)anonymAndInner.AnonymAndInnerTest.nested()->(3)helper.Debug.debug(java.lang.String)	6	X	X	X	X	X	X	95
+(41)anonymAndInner.AnonymAndInnerTest.nested()->(36)anonymAndInner.Outer$Nested.staticNested()	6	X	X	X	X	X	X	95
+(41)anonymAndInner.AnonymAndInnerTest.nested()->(37)anonymAndInner.Outer$Nested.nested()	6	X	X	X	X	X	X	95
+(41)anonymAndInner.AnonymAndInnerTest.nested()->(127)anonymAndInner.Outer$Nested.<init>()	6	X	X	X	X	X	X	95
+(42)anonymAndInner.AnonymAndInnerTest$2.generic(helper.Child1)->(3)helper.Debug.debug(java.lang.String)	6	X	X	X	X	X	X	95
+(42)anonymAndInner.AnonymAndInnerTest$2.generic(helper.Child1)->(49)helper.Child1.foo()	6	X	X	X	X	X	X	95
+(43)helper.Child2.goo()->(3)helper.Debug.debug(java.lang.String)	6	X	X	X	X	X	X	95
+(44)helper.Child2.hoo()->(3)helper.Debug.debug(java.lang.String)	6	X	X	X	X	X	X	95
+(45)helper.Interface.hoo()->(3)helper.Debug.debug(java.lang.String)	6	X	X	X	X	X	X	95
+(46)helper.Child3.hoo()->(3)helper.Debug.debug(java.lang.String)	6	X	X	X	X	X	X	95
+(47)helper.Abstract.foo()->(3)helper.Debug.debug(java.lang.String)	6	X	X	X	X	X	X	95
+(48)helper.Child1.goo()->(3)helper.Debug.debug(java.lang.String)	6	X	X	X	X	X	X	95
+(49)helper.Child1.foo()->(3)helper.Debug.debug(java.lang.String)	6	X	X	X	X	X	X	95
+(50)helper.Child1.child1()->(3)helper.Debug.debug(java.lang.String)	6	X	X	X	X	X	X	95
+(51)helper.Base.base()->(3)helper.Debug.debug(java.lang.String)	6	X	X	X	X	X	X	95
+(52)polimorph.Overload.foo()->(3)helper.Debug.debug(java.lang.String)	6	X	X	X	X	X	X	95
+(53)polimorph.Overload.foo(int)->(3)helper.Debug.debug(java.lang.String)	6	X	X	X	X	X	X	95
+(54)polimorph.Overload.foo(java.lang.Object)->(3)helper.Debug.debug(java.lang.String)	6	X	X	X	X	X	X	95
+(55)polimorph.Overload.foo(int,java.lang.Object[])->(3)helper.Debug.debug(java.lang.String)	6	X	X	X	X	X	X	95
+(56)polimorph.Overload.overload1()->(3)helper.Debug.debug(java.lang.String)	6	X	X	X	X	X	X	95
+(56)polimorph.Overload.overload1()->(52)polimorph.Overload.foo()	6	X	X	X	X	X	X	95
+(57)polimorph.Overload.overload2()->(3)helper.Debug.debug(java.lang.String)	6	X	X	X	X	X	X	95
+(57)polimorph.Overload.overload2()->(53)polimorph.Overload.foo(int)	6	X	X	X	X	X	X	95
+(58)polimorph.Overload.overload3()->(3)helper.Debug.debug(java.lang.String)	6	X	X	X	X	X	X	95
+(58)polimorph.Overload.overload3()->(54)polimorph.Overload.foo(java.lang.Object)	6	X	X	X	X	X	X	95
+(59)polimorph.Overload.overload4()->(3)helper.Debug.debug(java.lang.String)	6	X	X	X	X	X	X	95
+(59)polimorph.Overload.overload4()->(55)polimorph.Overload.foo(int,java.lang.Object[])	6	X	X	X	X	X	X	95
+(60)polimorph.PolimorphTest.overload()->(3)helper.Debug.debug(java.lang.String)	6	X	X	X	X	X	X	95
+(60)polimorph.PolimorphTest.overload()->(56)polimorph.Overload.overload1()	6	X	X	X	X	X	X	95
+(60)polimorph.PolimorphTest.overload()->(57)polimorph.Overload.overload2()	6	X	X	X	X	X	X	95
+(60)polimorph.PolimorphTest.overload()->(58)polimorph.Overload.overload3()	6	X	X	X	X	X	X	95
+(60)polimorph.PolimorphTest.overload()->(59)polimorph.Overload.overload4()	6	X	X	X	X	X	X	95
+(60)polimorph.PolimorphTest.overload()->(133)polimorph.Overload.<init>()	6	X	X	X	X	X	X	95
+(61)polimorph.PolimorphTest.polimorphic()->(3)helper.Debug.debug(java.lang.String)	6	X	X	X	X	X	X	95
+(61)polimorph.PolimorphTest.polimorphic()->(63)polimorph.Polimorph.overloadedInterface(helper.Interface)	6	X	X	X	X	X	X	95
+(61)polimorph.PolimorphTest.polimorphic()->(130)helper.Child3.<init>()	6	X	X	X	X	X	X	95
+(61)polimorph.PolimorphTest.polimorphic()->(134)polimorph.Polimorph.<init>()	6	X	X	X	X	X	X	95
+(61)polimorph.PolimorphTest.polimorphic()->(135)polimorph.Polimorph.interfaceImplementation()	6	X	X	X	X	X	X	95
+(61)polimorph.PolimorphTest.polimorphic()->(136)polimorph.Polimorph.interfaceImplementation2()	6	X	X	X	X	X	X	95
+(61)polimorph.PolimorphTest.polimorphic()->(137)polimorph.Polimorph.abstractClassImplementation()	6	X	X	X	X	X	X	95
+(62)polimorph.PolimorphTest.test()->(3)helper.Debug.debug(java.lang.String)	6	X	X	X	X	X	X	95
+(62)polimorph.PolimorphTest.test()->(60)polimorph.PolimorphTest.overload()	6	X	X	X	X	X	X	95
+(62)polimorph.PolimorphTest.test()->(61)polimorph.PolimorphTest.polimorphic()	6	X	X	X	X	X	X	95
+(63)polimorph.Polimorph.overloadedInterface(helper.Interface)->(3)helper.Debug.debug(java.lang.String)	6	X	X	X	X	X	X	95
+(63)polimorph.Polimorph.overloadedInterface(helper.Interface)->(45)helper.Interface.hoo()	5	X	X	X	X		X	79
+(64)polimorph.Polimorph.overloadedInterface()->(3)helper.Debug.debug(java.lang.String)	6	X	X	X	X	X	X	95
+(64)polimorph.Polimorph.overloadedInterface()->(46)helper.Child3.hoo()	6	X	X	X	X	X	X	95
+(64)polimorph.Polimorph.overloadedInterface()->(130)helper.Child3.<init>()	6	X	X	X	X	X	X	95
+(65)polimorph.Polimorph.overloadedInterface2()->(3)helper.Debug.debug(java.lang.String)	6	X	X	X	X	X	X	95
+(65)polimorph.Polimorph.overloadedInterface2()->(43)helper.Child2.goo()	6	X	X	X	X	X	X	95
+(65)polimorph.Polimorph.overloadedInterface2()->(44)helper.Child2.hoo()	6	X	X	X	X	X	X	95
+(65)polimorph.Polimorph.overloadedInterface2()->(118)helper.Child2.<init>()	6	X	X	X	X	X	X	95
+(66)initialization.StaticInit.<clinit>()->(3)helper.Debug.debug(java.lang.String)	6	X	X	X	X	X	X	95
+(66)initialization.StaticInit.<clinit>()->(68)initialization.IntermediateInitialization.instantiateChild1()	6	X	X	X	X	X	X	95
+(66)initialization.StaticInit.<clinit>()->(118)helper.Child2.<init>()	6	X	X	X	X	X	X	95
+(66)initialization.StaticInit.<clinit>()->(139)initialization.IntermediateInitialization.<init>()	6	X	X	X	X	X	X	95
+(67)initialization.StaticInit.staticInit()->(3)helper.Debug.debug(java.lang.String)	6	X	X	X	X	X	X	95
+(68)initialization.IntermediateInitialization.instantiateChild1()->(3)helper.Debug.debug(java.lang.String)	6	X	X	X	X	X	X	95
+(68)initialization.IntermediateInitialization.instantiateChild1()->(86)helper.Child1.<init>()	6	X	X	X	X	X	X	95
+(69)initialization.Init.<init>(helper.Interface)->(3)helper.Debug.debug(java.lang.String)	6	X	X	X	X	X	X	95
+(69)initialization.Init.<init>(helper.Interface)->(68)initialization.IntermediateInitialization.instantiateChild1()	5	X		X	X	X	X	93
+(69)initialization.Init.<init>(helper.Interface)->(86)helper.Child1.<init>()	6	X	X	X	X	X	X	95
+(69)initialization.Init.<init>(helper.Interface)->(118)helper.Child2.<init>()	6	X	X	X	X	X	X	95
+(69)initialization.Init.<init>(helper.Interface)->(139)initialization.IntermediateInitialization.<init>()	5	X		X	X	X	X	93
+(70)initialization.Constructor.<init>()->(3)helper.Debug.debug(java.lang.String)	6	X	X	X	X	X	X	95
+(71)initialization.InitializationTest.test()->(3)helper.Debug.debug(java.lang.String)	6	X	X	X	X	X	X	95
+(71)initialization.InitializationTest.test()->(67)initialization.StaticInit.staticInit()	6	X	X	X	X	X	X	95
+(71)initialization.InitializationTest.test()->(69)initialization.Init.<init>(helper.Interface)	6	X	X	X	X	X	X	95
+(71)initialization.InitializationTest.test()->(70)initialization.Constructor.<init>()	6	X	X	X	X	X	X	95
+(71)initialization.InitializationTest.test()->(86)helper.Child1.<init>()	6	X	X	X	X	X	X	95
+(72)dynamic.DynamicTest.main(java.lang.String[])->(73)dynamic.DynamicTest.<init>()	6	X	X	X	X	X	X	95
+(72)dynamic.DynamicTest.main(java.lang.String[])->(74)dynamic.DynamicTest.test()	6	X	X	X	X	X	X	95
+(74)dynamic.DynamicTest.test()->(0)dynamic.DynamicTest.reflection()	6	X	X	X	X	X	X	95
+(74)dynamic.DynamicTest.test()->(7)dynamic.DynamicTest.methodHandle()	6	X	X	X	X	X	X	95
+(85)java8.Java8Test.main(java.lang.String[])->(16)java8.Java8Test.test()	6	X	X	X	X	X	X	95
+(85)java8.Java8Test.main(java.lang.String[])->(83)java8.Java8Test.<init>()	6	X	X	X	X	X	X	95
+(109).CallGraphTest.main(java.lang.String[])->(16)java8.Java8Test.test()	6	X	X	X	X	X	X	95
+(109).CallGraphTest.main(java.lang.String[])->(25)generics.GenericsTest.test()	6	X	X	X	X	X	X	95
+(109).CallGraphTest.main(java.lang.String[])->(29)parser.ParserTest.test()	6	X	X	X	X	X	X	95
+(109).CallGraphTest.main(java.lang.String[])->(62)polimorph.PolimorphTest.test()	6	X	X	X	X	X	X	95
+(109).CallGraphTest.main(java.lang.String[])->(71)initialization.InitializationTest.test()	6	X	X	X	X	X	X	95
+(109).CallGraphTest.main(java.lang.String[])->(73)dynamic.DynamicTest.<init>()	6	X	X	X	X	X	X	95
+(109).CallGraphTest.main(java.lang.String[])->(74)dynamic.DynamicTest.test()	6	X	X	X	X	X	X	95
+(109).CallGraphTest.main(java.lang.String[])->(83)java8.Java8Test.<init>()	6	X	X	X	X	X	X	95
+(109).CallGraphTest.main(java.lang.String[])->(110)parser.ParserTest.<init>()	6	X	X	X	X	X	X	95
+(109).CallGraphTest.main(java.lang.String[])->(111)anonymAndInner.AnonymAndInnerTest.<init>()	6	X	X	X	X	X	X	95
+(109).CallGraphTest.main(java.lang.String[])->(112)anonymAndInner.AnonymAndInnerTest.test()	6	X	X	X	X	X	X	95
+(109).CallGraphTest.main(java.lang.String[])->(113)initialization.InitializationTest.<init>()	6	X	X	X	X	X	X	95
+(109).CallGraphTest.main(java.lang.String[])->(114)generics.GenericsTest.<init>()	6	X	X	X	X	X	X	95
+(109).CallGraphTest.main(java.lang.String[])->(115)polimorph.PolimorphTest.<init>()	6	X	X	X	X	X	X	95
+(112)anonymAndInner.AnonymAndInnerTest.test()->(39)anonymAndInner.AnonymAndInnerTest.innerClass()	6	X	X	X	X	X	X	95
+(112)anonymAndInner.AnonymAndInnerTest.test()->(40)anonymAndInner.AnonymAndInnerTest.anonim()	6	X	X	X	X	X	X	95
+(112)anonymAndInner.AnonymAndInnerTest.test()->(41)anonymAndInner.AnonymAndInnerTest.nested()	6	X	X	X	X	X	X	95
+(120)generics.Generic3.<init>()->(116)generics.Generic1.<init>()	5	X	X	X	X	X		31
+(121)generics.GenericsTest.main(java.lang.String[])->(25)generics.GenericsTest.test()	6	X	X	X	X	X	X	95
+(121)generics.GenericsTest.main(java.lang.String[])->(114)generics.GenericsTest.<init>()	6	X	X	X	X	X	X	95
+(123)parser.ParserTest.main(java.lang.String[])->(29)parser.ParserTest.test()	6	X	X	X	X	X	X	95
+(123)parser.ParserTest.main(java.lang.String[])->(110)parser.ParserTest.<init>()	6	X	X	X	X	X	X	95
+(128)anonymAndInner.AnonymAndInnerTest.main(java.lang.String[])->(111)anonymAndInner.AnonymAndInnerTest.<init>()	6	X	X	X	X	X	X	95
+(128)anonymAndInner.AnonymAndInnerTest.main(java.lang.String[])->(112)anonymAndInner.AnonymAndInnerTest.test()	6	X	X	X	X	X	X	95
+(130)helper.Child3.<init>()->(118)helper.Child2.<init>()	5	X	X	X	X	X		31
+(135)polimorph.Polimorph.interfaceImplementation()->(45)helper.Interface.hoo()	5		X	X	X	X	X	94
+(135)polimorph.Polimorph.interfaceImplementation()->(86)helper.Child1.<init>()	6	X	X	X	X	X	X	95
+(136)polimorph.Polimorph.interfaceImplementation2()->(45)helper.Interface.hoo()	4		X	X	X		X	78
+(136)polimorph.Polimorph.interfaceImplementation2()->(118)helper.Child2.<init>()	6	X	X	X	X	X	X	95
+(137)polimorph.Polimorph.abstractClassImplementation()->(47)helper.Abstract.foo()	4		X	X	X		X	78
+(137)polimorph.Polimorph.abstractClassImplementation()->(49)helper.Child1.foo()	6	X	X	X	X	X	X	95
+(137)polimorph.Polimorph.abstractClassImplementation()->(86)helper.Child1.<init>()	6	X	X	X	X	X	X	95
+(138)polimorph.PolimorphTest.main(java.lang.String[])->(62)polimorph.PolimorphTest.test()	6	X	X	X	X	X	X	95
+(138)polimorph.PolimorphTest.main(java.lang.String[])->(115)polimorph.PolimorphTest.<init>()	6	X	X	X	X	X	X	95
+(141)initialization.Constructor.callPrivate()->(142)initialization.Constructor.privateMethod()	6	X	X	X	X	X	X	95
+(143)initialization.InitializationTest.main(java.lang.String[])->(71)initialization.InitializationTest.test()	6	X	X	X	X	X	X	95
+(143)initialization.InitializationTest.main(java.lang.String[])->(113)initialization.InitializationTest.<init>()	6	X	X	X	X	X	X	95
+(0)dynamic.DynamicTest.reflection()->(6)java.lang.Class.<clinit>()	1	X						1
+(22)java8.MethodReference.<init>()->(95)java.util.Collections$SynchronizedCollection.add(java.lang.Object)	1	X						1
+(24)generics.GenericsTest.genericMethod(helper.Interface)->(35)anonymAndInner.AnonymAndInnerTest$1.foo()	1	X						1
+(24)generics.GenericsTest.genericMethod(helper.Interface)->(47)helper.Abstract.foo()	2	X				X		17
+(24)generics.GenericsTest.genericMethod(helper.Interface)->(49)helper.Child1.foo()	1	X						1
+(27)generics.Generic2.generic(helper.Interface,generics.Generic1)->(35)anonymAndInner.AnonymAndInnerTest$1.foo()	1	X						1
+(27)generics.Generic2.generic(helper.Interface,generics.Generic1)->(47)helper.Abstract.foo()	2	X				X		17
+(27)generics.Generic2.generic(helper.Interface,generics.Generic1)->(49)helper.Child1.foo()	1	X						1
+(29)parser.ParserTest.test()->(6)java.lang.Class.<clinit>()	1	X						1
+(40)anonymAndInner.AnonymAndInnerTest.anonim()->(35)anonymAndInner.AnonymAndInnerTest$1.foo()	2	X				X		17
+(42)anonymAndInner.AnonymAndInnerTest$2.generic(helper.Child1)->(35)anonymAndInner.AnonymAndInnerTest$1.foo()	2	X				X		17
+(63)polimorph.Polimorph.overloadedInterface(helper.Interface)->(35)anonymAndInner.AnonymAndInnerTest$1.foo()	1	X						1
+(63)polimorph.Polimorph.overloadedInterface(helper.Interface)->(43)helper.Child2.goo()	2	X				X		17
+(63)polimorph.Polimorph.overloadedInterface(helper.Interface)->(44)helper.Child2.hoo()	1	X						1
+(63)polimorph.Polimorph.overloadedInterface(helper.Interface)->(46)helper.Child3.hoo()	2	X				X		17
+(63)polimorph.Polimorph.overloadedInterface(helper.Interface)->(47)helper.Abstract.foo()	2	X				X		17
+(63)polimorph.Polimorph.overloadedInterface(helper.Interface)->(48)helper.Child1.goo()	1	X						1
+(63)polimorph.Polimorph.overloadedInterface(helper.Interface)->(49)helper.Child1.foo()	1	X						1
+(64)polimorph.Polimorph.overloadedInterface()->(43)helper.Child2.goo()	5	X	X	X		X	X	87
+(64)polimorph.Polimorph.overloadedInterface()->(47)helper.Abstract.foo()	5	X	X	X		X	X	87
+(65)polimorph.Polimorph.overloadedInterface2()->(46)helper.Child3.hoo()	1	X						1
+(65)polimorph.Polimorph.overloadedInterface2()->(47)helper.Abstract.foo()	5	X	X	X		X	X	87
+(66)initialization.StaticInit.<clinit>()->(66)initialization.StaticInit.<clinit>()	1	X						1
+(71)initialization.InitializationTest.test()->(66)initialization.StaticInit.<clinit>()	1	X						1
+(135)polimorph.Polimorph.interfaceImplementation()->(35)anonymAndInner.AnonymAndInnerTest$1.foo()	1	X						1
+(135)polimorph.Polimorph.interfaceImplementation()->(48)helper.Child1.goo()	2	X				X		17
+(135)polimorph.Polimorph.interfaceImplementation()->(49)helper.Child1.foo()	2	X				X		17
+(136)polimorph.Polimorph.interfaceImplementation2()->(44)helper.Child2.hoo()	2	X				X		17
+(136)polimorph.Polimorph.interfaceImplementation2()->(46)helper.Child3.hoo()	1	X						1
+(136)polimorph.Polimorph.interfaceImplementation2()->(47)helper.Abstract.foo()	2	X				X		17
+(137)polimorph.Polimorph.abstractClassImplementation()->(35)anonymAndInner.AnonymAndInnerTest$1.foo()	1	X						1
+(15)java8.Java8Test.functionalInterface2()->(79)java.io.PrintStream.println(java.lang.String)	2			X			X	68
+(15)java8.Java8Test.functionalInterface2()->(86)helper.Child1.<init>()	2			X			X	68
+(22)java8.MethodReference.<init>()->(22)java8.MethodReference.<init>()	1			X				4
+(69)initialization.Init.<init>(helper.Interface)->(69)initialization.Init.<init>(helper.Interface)	2			X			X	68

@@ -1,0 +1,345 @@
+digraph graphname {
+rankdir="LR";
+0 [label="CallGraphTest.main(java.lang.String[]):void:CallGraphTest.java:4:1:12:2"]
+28 [label="anonymAndInner.AnonymAndInnerTest$2.<init>():void::-1:-1:-1:-1"]
+29 [label="anonymAndInner.AnonymAndInnerTest$2.generic(helper.Child1):void:AnonymAndInnerTest.java:32:3:38:4"]
+24 [label="anonymAndInner.AnonymAndInnerTest$1.<init>():void::-1:-1:-1:-1"]
+25 [label="anonymAndInner.AnonymAndInnerTest$1.foo():void:AnonymAndInnerTest.java:24:3:26:4"]
+4 [label="anonymAndInner.AnonymAndInnerTest.<init>():void:AnonymAndInnerTest.java:-1:-1:-1:-1"]
+23 [label="anonymAndInner.AnonymAndInnerTest.anonim():void:AnonymAndInnerTest.java:15:1:41:2"]
+21 [label="anonymAndInner.AnonymAndInnerTest.innerClass():void:AnonymAndInnerTest.java:4:1:13:2"]
+34 [label="anonymAndInner.AnonymAndInnerTest.main(java.lang.String[]):void:AnonymAndInnerTest.java:60:1:63:2"]
+32 [label="anonymAndInner.AnonymAndInnerTest.nested():void:AnonymAndInnerTest.java:43:1:52:2"]
+3 [label="anonymAndInner.AnonymAndInnerTest.test():void:AnonymAndInnerTest.java:54:1:58:2"]
+18 [label="anonymAndInner.Outer$Inner.<init>():void::-1:-1:-1:-1"]
+17 [label="anonymAndInner.Outer$Inner.inner():void:Outer.java:11:2:13:3"]
+33 [label="anonymAndInner.Outer$Nested.<init>():void::-1:-1:-1:-1"]
+20 [label="anonymAndInner.Outer$Nested.nested():void:Outer.java:21:2:23:3"]
+19 [label="anonymAndInner.Outer$Nested.staticNested():void:Outer.java:17:2:19:3"]
+22 [label="anonymAndInner.Outer.<init>():void::-1:-1:-1:-1"]
+15 [label="anonymAndInner.Outer.inner():void:Outer.java:5:1:8:2"]
+37 [label="java.lang.Class<>.getMethod(java.lang.String;java.lang.Class<?>[]):java.lang.reflect.Method::-1:-1:-1:-1"]
+14 [label="dynamic.DynamicTest.<init>():void:DynamicTest.java:-1:-1:-1:-1"]
+49 [label="dynamic.DynamicTest.main(java.lang.String[]):void:DynamicTest.java:54:1:57:2"]
+43 [label="dynamic.DynamicTest.methodHandle():void:DynamicTest.java:31:1:49:2"]
+35 [label="dynamic.DynamicTest.reflection():void:DynamicTest.java:10:1:28:2"]
+13 [label="dynamic.DynamicTest.test():void:DynamicTest.java:50:1:53:2"]
+54 [label="generics.Generic1<helper.Interface>.<init>():void:ForParser.java:-1:-1:-1:-1"]
+30 [label="generics.Generic1<helper.Interface>.generic(helper.Child1):void:Generic1.java:4:1:11:2"]
+52 [label="generics.Generic1<helper.Interface>.generic(T):void:Generic1.java:4:1:11:2"]
+31 [label="generics.Generic1<helper.Interface>.generic(helper.Child1):void:Generic3.java:-1:-1:-1:-1"]
+56 [label="generics.Generic1<helper.Interface>.generic(helper.Child2):void:Generic1.java:4:1:11:2"]
+58 [label="generics.Generic2<helper.Interface,generics.Generic1>.<init>():void:ForParser.java:-1:-1:-1:-1"]
+51 [label="generics.Generic2<helper.Interface,generics.Generic1>.generic(T;K):void:Generic2.java:4:1:11:2"]
+59 [label="generics.Generic2<helper.Interface,generics.Generic1>.generic(helper.Child2;generics.Generic1<helper.Interface>):void:Generic2.java:4:1:11:2"]
+61 [label="generics.Generic3.<init>():void::-1:-1:-1:-1"]
+60 [label="generics.Generic3.foo():void:Generic3.java:4:1:10:2"]
+10 [label="generics.GenericsTest.<init>():void:GenericsTest.java:-1:-1:-1:-1"]
+53 [label="generics.GenericsTest.genericMethod(T):void:GenericsTest.java:4:1:10:2"]
+62 [label="generics.GenericsTest.genericMethod(helper.Child2):void:GenericsTest.java:4:1:10:2"]
+63 [label="generics.GenericsTest.main(java.lang.String[]):void:GenericsTest.java:29:1:31:2"]
+9 [label="generics.GenericsTest.test():void:GenericsTest.java:12:1:28:2"]
+67 [label="helper.Abstract.foo():void:Abstract.java:4:1:6:2"]
+64 [label="helper.Base.base():void:Base.java:4:1:6:2"]
+55 [label="helper.Child1.<init>():void:Polimorph.java:-1:-1:-1:-1"]
+68 [label="helper.Child1.child1():void:Child1.java:10:1:12:2"]
+26 [label="helper.Child1.foo():void:Child1.java:7:1:9:2"]
+27 [label="helper.Child1.goo():void:Child1.java:4:1:6:2"]
+57 [label="helper.Child2.<init>():void:Polimorph.java:-1:-1:-1:-1"]
+69 [label="helper.Child2.goo():void:Child2.java:4:1:6:2"]
+70 [label="helper.Child2.hoo():void:Child2.java:7:1:9:2"]
+111 [label="helper.Child3.<init>():void:PolimorphTest.java:-1:-1:-1:-1"]
+71 [label="helper.Child3.hoo():void:Child3.java:4:1:6:2"]
+16 [label="helper.Debug.debug(java.lang.String):void:Debug.java:6:1:10:2"]
+50 [label="helper.Interface.foo():void:Interface.java:4:3:4:14"]
+65 [label="helper.Interface.goo():void:Interface.java:5:3:5:14"]
+66 [label="helper.Interface.hoo():void:Interface.java:6:3:8:4"]
+78 [label="initialization.Constructor.<init>():void:Constructor.java:12:1:14:2"]
+81 [label="initialization.Constructor.callPrivate():void:Constructor.java:8:1:10:2"]
+80 [label="initialization.Constructor.privateMethod():void:Constructor.java:4:1:6:2"]
+77 [label="initialization.Init.<init>(helper.Interface):void:Init.java:14:3:17:4"]
+76 [label="initialization.Init.<initblock>():void::-1:-1:-1:-1"]
+6 [label="initialization.InitializationTest.<init>():void:InitializationTest.java:-1:-1:-1:-1"]
+79 [label="initialization.InitializationTest.main(java.lang.String[]):void:InitializationTest.java:20:4:22:2"]
+5 [label="initialization.InitializationTest.test():void:InitializationTest.java:7:1:18:5"]
+74 [label="initialization.IntermediateInitialization.<init>():void:Init.java:-1:-1:-1:-1"]
+73 [label="initialization.IntermediateInitialization.instantiateChild1():helper.Child1:IntermediateInitialization.java:5:1:8:2"]
+72 [label="initialization.StaticInit.<clinit>():void::-1:-1:-1:-1"]
+75 [label="initialization.StaticInit.staticInit():void:StaticInit.java:14:1:16:2"]
+42 [label="java.io.PrintStream.println(java.lang.String):void:Java8Test.java:-1:-1:-1:-1"]
+38 [label="java.lang.Class.forName(java.lang.String):java.lang.Class<>::-1:-1:-1:-1"]
+36 [label="java.lang.Class<>.getMethod(java.lang.String;java.lang.Class<?>[]):java.lang.reflect.Method::-1:-1:-1:-1"]
+39 [label="java.lang.Class.forName(java.lang.String):java.lang.Class<>::-1:-1:-1:-1"]
+100 [label="java.lang.Iterable<java.lang.String>.forEach(java.util.function.Consumer<? super java.lang.String>):void::-1:-1:-1:-1"]
+101 [label="java.lang.Iterable<java.lang.String>.forEach(java.util.function.Consumer<? super java.lang.String>):void::-1:-1:-1:-1"]
+93 [label="java.lang.String.<init>(java.lang.String):void::-1:-1:-1:-1"]
+92 [label="java.lang.String.toLowerCase():java.lang.String::-1:-1:-1:-1"]
+48 [label="java.lang.Throwable.printStackTrace():void::-1:-1:-1:-1"]
+47 [label="java.lang.invoke.MethodHandle.invokeWithArguments(java.lang.Object[]):java.lang.Object::-1:-1:-1:-1"]
+46 [label="java.lang.invoke.MethodHandles$Lookup.findStatic(java.lang.Class<>;java.lang.String;java.lang.invoke.MethodType):java.lang.invoke.MethodHandle::-1:-1:-1:-1"]
+45 [label="java.lang.invoke.MethodHandles.lookup():java.lang.invoke.MethodHandles$Lookup::-1:-1:-1:-1"]
+44 [label="java.lang.invoke.MethodType.methodType(java.lang.Class<>;java.lang.Class<>):java.lang.invoke.MethodType::-1:-1:-1:-1"]
+40 [label="java.lang.reflect.AccessibleObject.setAccessible(boolean):void::-1:-1:-1:-1"]
+41 [label="java.lang.reflect.Method.invoke(java.lang.Object;java.lang.Object[]):java.lang.Object::-1:-1:-1:-1"]
+95 [label="java.util.ArrayList<java.lang.String>.<init>():void::-1:-1:-1:-1"]
+98 [label="java.util.List<java.lang.String>.add(java.lang.String):boolean::-1:-1:-1:-1"]
+99 [label="java.util.List<java.lang.String>.add(java.lang.String):boolean:MethodReference.java:-1:-1:-1:-1"]
+82 [label="java8.FunctionalInterface.doSomething(java.lang.String):java.lang.String:FunctionalInterface.java:4:1:4:32"]
+8 [label="java8.Java8Test.<init>():void:Java8Test.java:-1:-1:-1:-1"]
+89 [label="java8.Java8Test.functionalInterface():void:Java8Test.java:20:1:28:2"]
+90 [label="java8.Java8Test.functionalInterface2():void:Java8Test.java:30:1:39:2"]
+85 [label="java8.Lambda.compare(int;int):boolean:Java8Test.java:10:13:10:92"]
+91 [label="java8.FunctionalInterface.doSomething(java.lang.String):java.lang.String:Java8Test.java:36:54:36:139"]
+84 [label="java8.Java8Test.lambda():void:Java8Test.java:4:1:12:2"]
+94 [label="java8.Java8Test.main(java.lang.String[]):void:Java8Test.java:49:1:51:2"]
+86 [label="java8.Java8Test.methodReference():void:Java8Test.java:14:1:18:2"]
+7 [label="java8.Java8Test.test():void:Java8Test.java:41:1:47:2"]
+83 [label="java8.Lambda.compare(int;int):boolean:Lambda.java:4:1:4:33"]
+87 [label="java8.MethodReference.<init>():void:MethodReference.java:18:1:21:2"]
+88 [label="java8.MethodReference.doSomething():void:MethodReference.java:23:1:29:2"]
+96 [label="java8.MethodReference.print(java.lang.String):java.lang.String:MethodReference.java:9:1:12:2"]
+97 [label="java8.MethodReference.privatePrint():void:MethodReference.java:14:1:16:2"]
+102 [label="parser.ForParser.<init>():void:ParserTest.java:-1:-1:-1:-1"]
+103 [label="parser.ForParser.foo():void:ForParser.java:7:1:9:2"]
+104 [label="parser.ForParser.goo():void:ForParser.java:11:1:13:2"]
+106 [label="parser.ForParser.validGenericMethod(helper.Child2;generics.Generic1<helper.Interface>;java.lang.Class<?>[]):generics.Generic2<helper.Interface,generics.Generic1>:ForParser.java:24:1:30:2"]
+107 [label="parser.ForParser.validGenericMethod(helper.Child2;generics.Generic1<helper.Interface>;java.lang.Class<?>[]):generics.Generic2<helper.Interface,generics.Generic1>::-1:-1:-1:-1"]
+105 [label="parser.ForParser.validMethod(helper.Child2;generics.Generic1<helper.Interface>;java.lang.Class<?>[]):generics.Generic2<helper.Interface,generics.Generic1>:ForParser.java:16:1:22:2"]
+2 [label="parser.ParserTest.<init>():void:ParserTest.java:-1:-1:-1:-1"]
+108 [label="parser.ParserTest.main(java.lang.String[]):void:ParserTest.java:22:1:24:2"]
+1 [label="parser.ParserTest.test():void:ParserTest.java:5:1:20:2"]
+126 [label="polimorph.Overload.<init>():void::-1:-1:-1:-1"]
+116 [label="polimorph.Overload.foo():void:Overload.java:4:1:6:2"]
+117 [label="polimorph.Overload.foo(int):void:Overload.java:7:1:9:2"]
+119 [label="polimorph.Overload.foo(int;java.lang.Object[]):void:Overload.java:13:1:15:2"]
+118 [label="polimorph.Overload.foo(T):void:Overload.java:10:1:12:2"]
+123 [label="polimorph.Overload.foo(polimorph.Overload):void:Overload.java:10:1:12:2"]
+120 [label="polimorph.Overload.overload1():void:Overload.java:17:1:23:2"]
+121 [label="polimorph.Overload.overload2():void:Overload.java:25:1:31:2"]
+122 [label="polimorph.Overload.overload3():void:Overload.java:33:1:39:2"]
+124 [label="polimorph.Overload.overload4():void:Overload.java:41:1:47:2"]
+128 [label="polimorph.Polimorph.<init>():void::-1:-1:-1:-1"]
+115 [label="polimorph.Polimorph.abstractClassImplementation():void:Polimorph.java:79:1:87:2"]
+113 [label="polimorph.Polimorph.interfaceImplementation():void:Polimorph.java:50:1:63:2"]
+114 [label="polimorph.Polimorph.interfaceImplementation2():void:Polimorph.java:65:1:77:2"]
+110 [label="polimorph.Polimorph.overloadedInterface():void:Polimorph.java:19:1:33:2"]
+109 [label="polimorph.Polimorph.overloadedInterface(helper.Interface):void:Polimorph.java:4:1:17:2"]
+112 [label="polimorph.Polimorph.overloadedInterface2():void:Polimorph.java:35:1:48:2"]
+12 [label="polimorph.PolimorphTest.<init>():void:PolimorphTest.java:-1:-1:-1:-1"]
+129 [label="polimorph.PolimorphTest.main(java.lang.String[]):void:PolimorphTest.java:28:1:31:2"]
+125 [label="polimorph.PolimorphTest.overload():void:PolimorphTest.java:4:1:12:2"]
+127 [label="polimorph.PolimorphTest.polimorphic():void:PolimorphTest.java:14:1:21:2"]
+11 [label="polimorph.PolimorphTest.test():void:PolimorphTest.java:23:1:27:2"]
+0 -> 1
+0 -> 2
+0 -> 3
+0 -> 4
+0 -> 5
+0 -> 6
+0 -> 7
+0 -> 8
+0 -> 9
+0 -> 10
+0 -> 11
+0 -> 12
+0 -> 13
+0 -> 14
+1 -> 16
+1 -> 54
+1 -> 57
+1 -> 59
+1 -> 102
+1 -> 103
+1 -> 104
+1 -> 105
+1 -> 107
+3 -> 21
+3 -> 23
+3 -> 32
+5 -> 16
+5 -> 55
+5 -> 75
+5 -> 77
+5 -> 78
+7 -> 16
+7 -> 84
+7 -> 86
+7 -> 89
+7 -> 90
+9 -> 16
+9 -> 31
+9 -> 54
+9 -> 55
+9 -> 56
+9 -> 57
+9 -> 58
+9 -> 59
+9 -> 60
+9 -> 61
+9 -> 62
+11 -> 16
+11 -> 125
+11 -> 127
+13 -> 35
+13 -> 43
+15 -> 16
+15 -> 17
+15 -> 18
+16 -> 42
+17 -> 16
+19 -> 16
+20 -> 16
+21 -> 15
+21 -> 16
+21 -> 22
+23 -> 16
+23 -> 24
+23 -> 26
+23 -> 27
+23 -> 28
+23 -> 31
+25 -> 16
+26 -> 16
+27 -> 16
+29 -> 16
+29 -> 26
+30 -> 16
+30 -> 50
+32 -> 16
+32 -> 19
+32 -> 20
+32 -> 33
+34 -> 3
+34 -> 4
+35 -> 16
+35 -> 37
+35 -> 39
+35 -> 40
+35 -> 41
+35 -> 42
+43 -> 16
+43 -> 42
+43 -> 44
+43 -> 45
+43 -> 46
+43 -> 47
+43 -> 48
+49 -> 13
+49 -> 14
+51 -> 16
+51 -> 50
+51 -> 52
+53 -> 16
+53 -> 50
+60 -> 16
+60 -> 31
+60 -> 55
+63 -> 9
+63 -> 10
+64 -> 16
+66 -> 16
+67 -> 16
+68 -> 16
+69 -> 16
+70 -> 16
+71 -> 16
+72 -> 16
+72 -> 57
+72 -> 73
+72 -> 74
+73 -> 16
+73 -> 55
+75 -> 16
+76 -> 16
+76 -> 55
+76 -> 57
+77 -> 16
+77 -> 73
+77 -> 74
+77 -> 76
+78 -> 16
+79 -> 5
+79 -> 6
+81 -> 80
+84 -> 16
+84 -> 83
+86 -> 16
+86 -> 87
+86 -> 88
+87 -> 99
+88 -> 101
+89 -> 16
+89 -> 82
+90 -> 16
+90 -> 42
+90 -> 55
+90 -> 82
+90 -> 92
+90 -> 93
+94 -> 7
+94 -> 8
+96 -> 16
+97 -> 16
+103 -> 16
+104 -> 16
+105 -> 16
+105 -> 58
+105 -> 59
+106 -> 16
+106 -> 54
+106 -> 58
+106 -> 59
+108 -> 1
+108 -> 2
+109 -> 16
+109 -> 50
+109 -> 65
+109 -> 66
+110 -> 16
+110 -> 67
+110 -> 69
+110 -> 71
+110 -> 111
+112 -> 16
+112 -> 57
+112 -> 67
+112 -> 69
+112 -> 70
+113 -> 50
+113 -> 55
+113 -> 65
+113 -> 66
+114 -> 50
+114 -> 57
+114 -> 66
+115 -> 26
+115 -> 55
+115 -> 67
+116 -> 16
+117 -> 16
+118 -> 16
+119 -> 16
+120 -> 16
+120 -> 116
+121 -> 16
+121 -> 117
+122 -> 16
+122 -> 123
+124 -> 16
+124 -> 119
+125 -> 16
+125 -> 120
+125 -> 121
+125 -> 122
+125 -> 124
+125 -> 126
+127 -> 16
+127 -> 109
+127 -> 111
+127 -> 113
+127 -> 114
+127 -> 115
+127 -> 128
+129 -> 11
+129 -> 12
+}

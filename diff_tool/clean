@@ -1,0 +1,12 @@
+#!/bin/bash
+#This file can be used to clear everything created by the comparer or move everything into a given folder.
+if [ $# -eq 0 ]; then
+  rm *.csv *.tsv *.list *.diff non* *.txt *.debug
+else
+  if [ $# -eq 1 ]; then
+    if [ ! -d "$1" ]; then
+      mkdir $1
+    fi
+    mv *.csv *.tsv *.list *.diff non* *.txt *.debug $1/
+  fi
+fi

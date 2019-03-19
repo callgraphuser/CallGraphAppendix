@@ -1,0 +1,197 @@
+diff --git a/cl/LIM2CallGraph/inc/visitors/CallGraphVisitor.h b/cl/LIM2CallGraph/inc/visitors/CallGraphVisitor.h
+index 54d6a71..e8be227 100644
+--- a/cl/LIM2CallGraph/inc/visitors/CallGraphVisitor.h
++++ b/cl/LIM2CallGraph/inc/visitors/CallGraphVisitor.h
+@@ -5,7 +5,7 @@
+ #include <lim/inc/lim.h>
+ #include <graph/inc/graph.h>
+ #include <rul/inc/RulHandler.h>
+-#include "../LIM2Stink.h"
++#include "../LIM2CallGraph.h"
+ 
+ #include <set>
+ 
+@@ -13,7 +13,7 @@ namespace columbus {
+ 	namespace lim {
+ 		namespace antipatterns {
+ 
+-			class CallGraphVisitor : public LIM2StinkVisitor {
++			class CallGraphVisitor : public LIM2CallGraphVisitor {
+ 
+ 				std::map<NodeId, std::set<NodeId>> graph;
+ 
+@@ -32,6 +32,8 @@ namespace columbus {
+ 
+ 				std::string projectName, outDir;
+ 
++			    std::string produceLineInf(const columbus::lim::asg::logical::Method*);
++
+ 			public:
+ 
+ 				CallGraphVisitor(asg::Factory& fact, graph::Graph& inGraph, columbus::rul::RulHandler& rl, const std::string& projectName, const std::string& out);
+diff --git a/cl/LIM2CallGraph/src/main.cpp b/cl/LIM2CallGraph/src/main.cpp
+index 46a3a87..d7dfb87 100644
+--- a/cl/LIM2CallGraph/src/main.cpp
++++ b/cl/LIM2CallGraph/src/main.cpp
+@@ -13,6 +13,7 @@
+ #include <rul/inc/RulHandler.h>
+ #include <common/inc/WriteMessage.h>
+ #include <common/inc/Arguments.h>
++#include <java/inc/java.h>
+ 
+ #include "../inc/LIM2CallGraph.h"
+ #include "../inc/visitors/CallGraphVisitor.h"
+@@ -35,7 +36,6 @@ using namespace columbus::rul;
+ using namespace columbus::lim::asg;
+ using namespace columbus::lim::antipatterns;
+ 
+-// parameters
+ 
+ static string csvFile;
+ static string graphFile;
+@@ -49,7 +49,6 @@ bool useFilter = true;
+ static list<string> inputFiles;
+ 
+ 
+-// Callback methods for argument processing
+ 
+ static bool ppCsv( const common::Option *o, char *argv[] ) {
+   csvFile = argv[0];
+@@ -117,7 +116,6 @@ const Option OPTIONS_OBJ [] = {
+   COMMON_CL_ARGS
+ };
+ 
+-// TODO refactor into common, copied from LIM2Metrics
+ void loadFilter(lim::asg::Factory& fact, const string& file) {
+   string flt = common::pathRemoveExtension(file) + ".flim";
+   if (common::fileTimeCmp(flt, file) == -1) {
+@@ -134,6 +132,48 @@ void loadFilter(lim::asg::Factory& fact, const string& file) {
+ }
+ 
+ 
++void ljsiVisit(std::string inputFile) {
++	RefDistributorStrTable strTable;
++	java::asg::Factory factory(strTable);
++	std::string old_ex = ".lim";
++	size_t extension_loc = inputFile.rfind(old_ex);
++	inputFile.replace(extension_loc, old_ex.length(), ".ljsi");
++	try
++	{
++		CsiHeader header;
++		factory.load(inputFile, header);
++	}
++	catch (IOException e)
++	{
++		return;
++	}
++
++
++	factory.turnFilterOn();
++	factory.initializeFilter();
++//	loadFilter(factory, inputFile);
++	factory.turnFilterOff();
++
++	/*{
++		std::shared_ptr<JAN2Stink> vis = std::make_shared<ParamStatCollector>(factory);
++		java::asg::AlgorithmPreorder().run(factory, *vis);
++	}
++	{
++		std::shared_ptr<StaticConstCollector> vis = std::make_shared<StaticConstCollector>(factory);
++		java::asg::AlgorithmPreorder().run(factory, *vis);
++
++		std::shared_ptr<JAN2Stink> vis2 = std::make_shared<FindValueChecker>(factory, std::make_shared<std::map<const java::asg::struc::VariableDeclaration*, columbus::NodeId>>(vis->getStaticConstVariables()));
++		java::asg::AlgorithmPreorder().run(factory, *vis2);
++
++		std::shared_ptr<JANPrimitiveObsession> vis3 = std::make_shared<JANPrimitiveObsession>(factory);
++		vis3->setParamCloneClasses(vis->getClassesOfParamClones());
++		vis3->setSmellyConstsClasses(vis->getSwitchSmellyClasses());
++		java::asg::AlgorithmPreorder().run(factory, *vis3);
++	}*/
++
++}
++
++
+ 
+ int main(int argc, char *argv[]) {
+ 
+@@ -149,9 +189,8 @@ int main(int argc, char *argv[]) {
+ 
+   WriteMsg::write(WriteMsg::mlDebug, "Loading input lim\n");
+ 
+-  // Load LIM
+   RefDistributorStrTable strTable;
+-  Factory factory(strTable, "", limLangOther); // the language and the root name will be loaded
++  Factory factory(strTable, "", limLangOther); 
+ 
+   lim::asg::OverrideRelations overrides(factory); 
+ 
+@@ -168,11 +207,9 @@ int main(int argc, char *argv[]) {
+ 	WriteMsg::write(WriteMsg::mlDebug, "No filter used");
+   WriteMsg::write(WriteMsg::mlDebug, "Converting lim to graph\n");
+ 
+-  // Convert LIM to graph
+   graph::Graph limGraph;
+   columbus::lim2graph::convertBaseGraph(factory, limGraph, true, true, true, true);
+ 
+-  // Load RUL file
+   RulHandler rul( common::indep_fullpath( rulFile ), rulConfig, "eng" );
+ 
+   AlgorithmPreorder ap;
+@@ -209,8 +246,6 @@ int main(int argc, char *argv[]) {
+   timestamp.close();
+ 
+ 
+-  //exportCsv(limGraph, csvFile);
+-
+   if ( ! graphFile.empty() ) {
+     cout << "Saving graph to " << graphFile << endl;
+     if ( exportRul ) {
+diff --git a/cl/LIM2CallGraph/src/visitors/CallGraphVisitor.cpp b/cl/LIM2CallGraph/src/visitors/CallGraphVisitor.cpp
+index 72ef1bb..8f02f5b 100644
+--- a/cl/LIM2CallGraph/src/visitors/CallGraphVisitor.cpp
++++ b/cl/LIM2CallGraph/src/visitors/CallGraphVisitor.cpp
+@@ -52,6 +52,18 @@ namespace columbus {
+ 			}
+ 
+ 
++			std::string CallGraphVisitor::produceLineInf(const columbus::lim::asg::logical::Method* m) {
++				if (m->getIsContainedInIsEmpty()) {
++					return ":-1:-1:-1:-1";
++				}
++				asg::ListIteratorAssocSourcePosition<asg::physical::File> posIt = m->getIsContainedInListIteratorAssocBegin();
++
++				asg::SourcePosition sp = posIt.getAssocClass();
++				
++				return ":" + std::to_string(sp.getLine()) + ":" + std::to_string(sp.getColumn()) +":" + std::to_string(sp.getEndLine()) + ":" + std::to_string(sp.getEndColumn());
++			}
++
++
+ 			void CallGraphVisitor::generateGraphml() {
+ 
+ 				auto encode = [](const std::string& data) {
+@@ -115,7 +127,6 @@ namespace columbus {
+ 				dtStream << "\"nodes\": [" << std::endl;
+ 				for (const auto node : allMethods) {
+ 					if (nodeHasEdge.find(node.first) != nodeHasEdge.end())
+-						//{"id": int_uid, "label": str_name, "entry": true, "final": true}
+ 						dtStream <<"{\"id\": " << node.first << ", \"label\": " << node.second->getDemangledName() << "}" << std::endl;
+ 				}
+ 
+@@ -132,7 +143,7 @@ namespace columbus {
+ 			}
+ 
+ 			void CallGraphVisitor::generateDotFile() {
+-				std::fstream dtStream(outDir+"\\" + projectName + ".dot", std::ios_base::out);
++				std::fstream dtStream(projectName + ".dot", std::ios_base::out);
+ 				if (!dtStream) {
+ 					WriteMsg::write(WriteMsg::mlDebug, "Failed to open dot file for generation");
+ 					return;
+@@ -142,7 +153,7 @@ namespace columbus {
+ 
+ 				for (const auto node : allMethods) {
+ 					if(nodeHasEdge.find(node.first) != nodeHasEdge.end())
+-						dtStream << node.first << " [label=\"" << node.second->getDemangledName() << "\"]" << std::endl;
++						dtStream << node.first << " [label=\"" << node.second->getDemangledName() + produceLineInf(node.second) << "\"]" << std::endl;
+ 				}
+ 
+ 

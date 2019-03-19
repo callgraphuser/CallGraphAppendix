@@ -1,0 +1,6 @@
+CallGraphTest ExampleProject/src
+
+ArgoUML http://argouml-downloads.tigris.org/source/browse/argouml-downloads/trunk/www/argouml-0.35.1/
+JFlap http://www.cs.duke.edu/csed/jflap/jflaptmp/july27-18/JFLAP7.1_With_Source.jar
+JodaTime https://github.com/JodaOrg/joda-time/releases/tag/v2.9.9
+MavenCore https://mvnrepository.com/artifact/org.apache.maven/maven-core/3.6.0

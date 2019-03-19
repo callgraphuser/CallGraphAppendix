@@ -1,0 +1,370 @@
+digraph graphname {
+rankdir="LR";
+72 [label="initialization.StaticInit.<clinit>():10:9:12:2"]
+63 [label="initialization.Init.<initblock>():10:4:12:4"]
+86 [label="java8.MethodReference.<initblock>():7:15:7:39"]
+122 [label="root.CallGraphTest.CallGraphTest():-1:-1:-1:-1"]
+116 [label="polimorph.Polimorph.abstractClassImplementation():83:14:87:2"]
+90 [label="java.util.List.add(java.lang.Object):-1:-1:-1:-1"]
+6 [label="anonymAndInner.AnonymAndInnerTest.anonim():20:7:41:2"]
+7 [label="anonymAndInner.AnonymAndInnerTest$1.AnonymAndInnerTest$1():23:22:27:3"]
+12 [label="anonymAndInner.AnonymAndInnerTest$2.AnonymAndInnerTest$2():31:41:39:3"]
+0 [label="anonymAndInner.AnonymAndInnerTest.AnonymAndInnerTest():-1:-1:-1:-1"]
+22 [label="anonymAndInner.Outer$Inner.Outer$Inner():-1:-1:-1:-1"]
+17 [label="anonymAndInner.Outer$Nested.Outer$Nested():-1:-1:-1:-1"]
+4 [label="anonymAndInner.Outer.Outer():-1:-1:-1:-1"]
+52 [label="helper.Base.base():4:14:6:2"]
+60 [label="initialization.Constructor.callPrivate():8:17:10:2"]
+53 [label="helper.Child1.child1():10:14:12:2"]
+75 [label="java8.Lambda.compare(int,int):-1:-1:-1:-1"]
+3 [label="helper.Debug.debug(java.lang.String):6:21:10:2"]
+78 [label="java8.MethodReference.doSomething():27:14:29:2"]
+80 [label="java8.FunctionalInterface.doSomething(java.lang.String):-1:-1:-1:-1"]
+24 [label="dynamic.DynamicTest.DynamicTest():-1:-1:-1:-1"]
+34 [label="java.lang.invoke.MethodHandles$Lookup.findStatic(java.lang.Class,java.lang.String,java.lang.invoke.MethodType):-1:-1:-1:-1"]
+9 [label="anonymAndInner.AnonymAndInnerTest$1.foo():24:16:26:4"]
+10 [label="helper.Child1.foo():7:14:9:2"]
+39 [label="helper.Interface.foo():-1:-1:-1:-1"]
+50 [label="helper.Abstract.foo():4:14:6:2"]
+43 [label="generics.Generic3.foo():7:14:10:2"]
+93 [label="parser.ForParser.foo():7:27:9:2"]
+101 [label="polimorph.Overload.foo():4:7:6:2"]
+102 [label="polimorph.Overload.foo(int):7:7:9:2"]
+104 [label="polimorph.Overload.foo(int,java.lang.Object[]):13:7:15:2"]
+103 [label="polimorph.Overload.foo(java.lang.Object):10:11:12:2"]
+91 [label="java.lang.Iterable.forEach(java.util.function.Consumer):-1:-1:-1:-1"]
+26 [label="java.lang.Class.forName(java.lang.String):-1:-1:-1:-1"]
+79 [label="java8.Java8Test.functionalInterface():24:7:28:2"]
+81 [label="java8.Java8Test.functionalInterface2():34:7:39:2"]
+14 [label="anonymAndInner.AnonymAndInnerTest$2.generic(helper.Child1):35:16:38:4"]
+15 [label="generics.Generic1.generic(helper.Interface):8:14:11:2"]
+41 [label="generics.Generic2.generic(helper.Interface,generics.Generic1):7:14:11:2"]
+45 [label="generics.GenericsTest.genericMethod(helper.Interface):7:43:10:2"]
+13 [label="generics.Generic1.Generic1():-1:-1:-1:-1"]
+40 [label="generics.Generic2.Generic2():-1:-1:-1:-1"]
+42 [label="generics.Generic3.Generic3():-1:-1:-1:-1"]
+44 [label="generics.GenericsTest.GenericsTest():-1:-1:-1:-1"]
+27 [label="java.lang.Class.getMethod(java.lang.String,java.lang.Class[]):-1:-1:-1:-1"]
+11 [label="helper.Child1.goo():4:14:6:2"]
+111 [label="helper.Interface.goo():-1:-1:-1:-1"]
+54 [label="helper.Child2.goo():4:14:6:2"]
+94 [label="parser.ForParser.goo():11:27:13:2"]
+49 [label="helper.Abstract.Abstract():-1:-1:-1:-1"]
+51 [label="helper.Base.Base():-1:-1:-1:-1"]
+8 [label="helper.Child1.Child1():-1:-1:-1:-1"]
+47 [label="helper.Child2.Child2():-1:-1:-1:-1"]
+56 [label="helper.Child3.Child3():-1:-1:-1:-1"]
+58 [label="helper.Debug.Debug():-1:-1:-1:-1"]
+59 [label="helper.Interface.hoo():3:18:9:1"]
+55 [label="helper.Child2.hoo():7:14:9:2"]
+57 [label="helper.Child3.hoo():4:14:6:2"]
+62 [label="initialization.Constructor.Constructor():12:2:14:2"]
+66 [label="initialization.Init.Init(helper.Interface):14:11:17:4"]
+67 [label="initialization.InitializationTest.InitializationTest():-1:-1:-1:-1"]
+64 [label="initialization.IntermediateInitialization.IntermediateInitialization():-1:-1:-1:-1"]
+71 [label="initialization.StaticInit.StaticInit():-1:-1:-1:-1"]
+5 [label="anonymAndInner.Outer.inner():5:14:8:2"]
+23 [label="anonymAndInner.Outer$Inner.inner():11:15:13:3"]
+2 [label="anonymAndInner.AnonymAndInnerTest.innerClass():8:7:13:2"]
+65 [label="initialization.IntermediateInitialization.instantiateChild1():5:23:8:2"]
+114 [label="polimorph.Polimorph.interfaceImplementation():58:14:63:2"]
+115 [label="polimorph.Polimorph.interfaceImplementation2():73:14:77:2"]
+29 [label="java.lang.reflect.Method.invoke(java.lang.Object,java.lang.Object[]):-1:-1:-1:-1"]
+35 [label="java.lang.invoke.MethodHandle.invokeWithArguments(java.lang.Object[]):-1:-1:-1:-1"]
+1 [label="java.lang.Object.Object():-1:-1:-1:-1"]
+82 [label="java.lang.String.String(java.lang.String):-1:-1:-1:-1"]
+87 [label="java.util.ArrayList.ArrayList():-1:-1:-1:-1"]
+73 [label="java8.Java8Test.Java8Test():-1:-1:-1:-1"]
+77 [label="java8.MethodReference.MethodReference():18:9:21:2"]
+74 [label="java8.Java8Test.lambda():8:15:12:2"]
+33 [label="java.lang.invoke.MethodHandles.lookup():-1:-1:-1:-1"]
+21 [label="anonymAndInner.AnonymAndInnerTest.main(java.lang.String[]):60:21:63:2"]
+48 [label="generics.GenericsTest.main(java.lang.String[]):29:21:31:2"]
+38 [label="dynamic.DynamicTest.main(java.lang.String[]):54:21:57:2"]
+70 [label="initialization.InitializationTest.main(java.lang.String[]):20:24:22:2"]
+85 [label="java8.Java8Test.main(java.lang.String[]):49:21:51:2"]
+99 [label="parser.ParserTest.main(java.lang.String[]):22:21:24:2"]
+121 [label="polimorph.PolimorphTest.main(java.lang.String[]):28:21:31:2"]
+123 [label="root.CallGraphTest.main(java.lang.String[]):4:21:12:2"]
+31 [label="dynamic.DynamicTest.methodHandle():35:7:49:2"]
+76 [label="java8.Java8Test.methodReference():14:7:18:2"]
+32 [label="java.lang.invoke.MethodType.methodType(java.lang.Class,java.lang.Class):-1:-1:-1:-1"]
+16 [label="anonymAndInner.AnonymAndInnerTest.nested():47:7:52:2"]
+18 [label="anonymAndInner.Outer$Nested.nested():21:15:23:3"]
+118 [label="polimorph.PolimorphTest.overload():4:7:12:2"]
+105 [label="polimorph.Overload.overload1():20:7:23:2"]
+106 [label="polimorph.Overload.overload2():28:7:31:2"]
+107 [label="polimorph.Overload.overload3():36:7:39:2"]
+108 [label="polimorph.Overload.overload4():44:7:47:2"]
+112 [label="polimorph.Polimorph.overloadedInterface():27:14:33:2"]
+110 [label="polimorph.Polimorph.overloadedInterface(helper.Interface):12:14:17:2"]
+113 [label="polimorph.Polimorph.overloadedInterface2():42:14:48:2"]
+92 [label="parser.ForParser.ForParser():-1:-1:-1:-1"]
+97 [label="parser.ParserTest.ParserTest():-1:-1:-1:-1"]
+100 [label="polimorph.Overload.Overload():-1:-1:-1:-1"]
+109 [label="polimorph.Polimorph.Polimorph():-1:-1:-1:-1"]
+117 [label="polimorph.PolimorphTest.PolimorphTest():-1:-1:-1:-1"]
+119 [label="polimorph.PolimorphTest.polimorphic():14:7:21:2"]
+88 [label="java8.MethodReference.print(java.lang.String):9:23:12:2"]
+36 [label="java.lang.Throwable.printStackTrace():-1:-1:-1:-1"]
+30 [label="java.io.PrintStream.println(java.lang.String):-1:-1:-1:-1"]
+61 [label="initialization.Constructor.privateMethod():-1:-1:-1:-1"]
+89 [label="java8.MethodReference.privatePrint():14:21:16:2"]
+25 [label="dynamic.DynamicTest.reflection():14:7:28:2"]
+28 [label="java.lang.reflect.AccessibleObject.setAccessible(boolean):-1:-1:-1:-1"]
+69 [label="initialization.StaticInit.staticInit():14:14:16:2"]
+19 [label="anonymAndInner.Outer$Nested.staticNested():17:22:19:3"]
+20 [label="anonymAndInner.AnonymAndInnerTest.test():54:14:58:2"]
+46 [label="generics.GenericsTest.test():12:14:28:2"]
+37 [label="dynamic.DynamicTest.test():50:14:53:2"]
+68 [label="initialization.InitializationTest.test():13:17:18:5"]
+84 [label="java8.Java8Test.test():41:14:47:2"]
+98 [label="parser.ParserTest.test():11:14:20:2"]
+120 [label="polimorph.PolimorphTest.test():23:14:27:2"]
+83 [label="java.lang.String.toLowerCase():-1:-1:-1:-1"]
+96 [label="parser.ForParser.validGenericMethod(helper.Child2,generics.Generic1,java.lang.Class[]):24:98:30:2"]
+95 [label="parser.ForParser.validMethod(helper.Child2,generics.Generic1,java.lang.Class[]):16:69:22:2"]
+0 -> 1
+2 -> 3
+2 -> 4
+2 -> 5
+3 -> 30
+4 -> 1
+5 -> 3
+5 -> 22
+5 -> 23
+6 -> 3
+6 -> 7
+6 -> 10
+6 -> 11
+6 -> 12
+6 -> 15
+7 -> 8
+8 -> 49
+9 -> 3
+10 -> 3
+11 -> 3
+12 -> 13
+13 -> 1
+14 -> 3
+14 -> 10
+15 -> 3
+15 -> 39
+16 -> 3
+16 -> 17
+16 -> 18
+16 -> 19
+17 -> 1
+18 -> 3
+19 -> 3
+20 -> 2
+20 -> 6
+20 -> 16
+21 -> 0
+21 -> 20
+22 -> 1
+23 -> 3
+24 -> 1
+25 -> 3
+25 -> 26
+25 -> 27
+25 -> 28
+25 -> 29
+25 -> 30
+31 -> 3
+31 -> 30
+31 -> 32
+31 -> 33
+31 -> 34
+31 -> 35
+31 -> 36
+37 -> 25
+37 -> 31
+38 -> 24
+38 -> 37
+40 -> 1
+41 -> 3
+41 -> 15
+41 -> 39
+42 -> 13
+43 -> 3
+43 -> 8
+43 -> 15
+44 -> 1
+45 -> 3
+45 -> 39
+46 -> 3
+46 -> 8
+46 -> 13
+46 -> 15
+46 -> 40
+46 -> 41
+46 -> 42
+46 -> 43
+46 -> 45
+46 -> 47
+47 -> 49
+48 -> 44
+48 -> 46
+49 -> 1
+50 -> 3
+51 -> 1
+52 -> 3
+53 -> 3
+54 -> 3
+55 -> 3
+56 -> 47
+57 -> 3
+58 -> 1
+59 -> 3
+60 -> 61
+62 -> 1
+62 -> 3
+63 -> 3
+63 -> 8
+63 -> 47
+63 -> 64
+63 -> 65
+64 -> 1
+65 -> 3
+65 -> 8
+66 -> 1
+66 -> 3
+66 -> 63
+67 -> 1
+68 -> 3
+68 -> 8
+68 -> 62
+68 -> 66
+68 -> 69
+69 -> 3
+70 -> 67
+70 -> 68
+71 -> 1
+72 -> 3
+72 -> 47
+72 -> 64
+72 -> 65
+73 -> 1
+74 -> 3
+74 -> 75
+76 -> 3
+76 -> 77
+76 -> 78
+77 -> 1
+77 -> 86
+77 -> 90
+78 -> 91
+79 -> 3
+79 -> 80
+81 -> 3
+81 -> 8
+81 -> 30
+81 -> 80
+81 -> 82
+81 -> 83
+84 -> 3
+84 -> 74
+84 -> 76
+84 -> 79
+84 -> 81
+85 -> 73
+85 -> 84
+86 -> 87
+88 -> 3
+89 -> 3
+92 -> 1
+93 -> 3
+94 -> 3
+95 -> 3
+95 -> 40
+95 -> 41
+96 -> 3
+96 -> 13
+96 -> 40
+96 -> 41
+97 -> 1
+98 -> 3
+98 -> 13
+98 -> 41
+98 -> 47
+98 -> 92
+98 -> 93
+98 -> 94
+98 -> 95
+98 -> 96
+99 -> 97
+99 -> 98
+100 -> 1
+101 -> 3
+102 -> 3
+103 -> 3
+104 -> 3
+105 -> 3
+105 -> 101
+106 -> 3
+106 -> 102
+107 -> 3
+107 -> 103
+108 -> 3
+108 -> 104
+109 -> 1
+110 -> 3
+110 -> 39
+110 -> 59
+110 -> 111
+112 -> 3
+112 -> 50
+112 -> 54
+112 -> 56
+112 -> 57
+113 -> 3
+113 -> 47
+113 -> 50
+113 -> 54
+113 -> 55
+114 -> 8
+114 -> 39
+114 -> 59
+114 -> 111
+115 -> 39
+115 -> 47
+115 -> 59
+116 -> 8
+116 -> 10
+116 -> 50
+117 -> 1
+118 -> 3
+118 -> 100
+118 -> 105
+118 -> 106
+118 -> 107
+118 -> 108
+119 -> 3
+119 -> 56
+119 -> 109
+119 -> 110
+119 -> 114
+119 -> 115
+119 -> 116
+120 -> 3
+120 -> 118
+120 -> 119
+121 -> 117
+121 -> 120
+122 -> 1
+123 -> 0
+123 -> 20
+123 -> 24
+123 -> 37
+123 -> 44
+123 -> 46
+123 -> 67
+123 -> 68
+123 -> 73
+123 -> 84
+123 -> 97
+123 -> 98
+123 -> 117
+123 -> 120
+}
